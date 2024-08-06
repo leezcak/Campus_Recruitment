@@ -4,10 +4,10 @@
 - [Project Overview](#project-overview)
 - [Data Sources](#data-sources)
 - [Tools](#tools)
-- [Data Cleaning/Preparation](#data-cleaning/preparation)
+- [Data Cleaning](#data-cleaning)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Data Analysis](#data-analysis)
-- [Results/Findings](#results/findings)
+- [Findings](#findings)
 - [Recommendations](#recommendations)
 
 ### Project Overview
@@ -20,7 +20,7 @@ This data analysis project aims to provide insights into the recruitment landsca
 - Excel: Data Cleaning [[cleaned data]](url)
 - Tableau: Data Visualisation [[final dashboard]](url)
 
-### Data Cleaning/Preparation
+### Data Cleaning
 In the initial data preparation phase, we performed the following tasks:
 1. Data loading and inspection.
 2. Handling missing values.
@@ -39,7 +39,7 @@ EDA involved exploring the sales data to answer key questions, such as:
 ### Data Analysis
 Here are some interesting features that I worked with...
 
-### Results/Findings
+### Findings
 The analysis results are summarised as follows:
 1.
 2.
