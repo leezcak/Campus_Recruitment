@@ -10,6 +10,7 @@
 - [Findings](#findings)
 - [Recommendations](#recommendations)
 
+
 ### Project Overview
 This data analysis project aims to provide insights into the recruitment landscape of an university. By analysing various aspects of the recruitment profile, we seek to identify trends, seek data-driven recommendations, and gain a deper understanding of the student body.
 
