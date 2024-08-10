@@ -44,34 +44,38 @@ EDA involved exploring the sales data to answer key questions, such as:
 ### Data Analysis
 These are the column headers of "campus_recruitment.csv" that we renamed for better legibility.
 ![image](https://github.com/user-attachments/assets/cf9cca35-4f9d-4256-934e-a54d914fd1f0)
+<br/><br/>
 
-Degree Distribution & Work Experience & Gender
+**Degree Distribution & Work Experience & Gender**
 We created bar graphs to compare these variables. The steps for creating Gender Distribution in Degrees is elaborated below:
 1. Drag Degree Field to Columns.
 2. Drag Degree Field to Rows, change to Measure (Count).
 3. Create a filter on Gender and create a Gender label.
 4. Choose appropriate colour schemes to differentiate Male and Female.
-5. The final graph:
-6. <img width="1417" alt="image" src="https://github.com/user-attachments/assets/58b0e98a-510d-449c-b5fa-dfbca372f1ad">
+<img width="1426" alt="image" src="https://github.com/user-attachments/assets/8982d92c-813a-4c9b-a300-8328f5be902c">
+<br/><br/>
 
-Entrance Exam Grade vs. MBA Grade & Starting Salary vs. MBA Grade
+
+**Entrance Exam Grade vs. MBA Grade & Starting Salary vs. MBA Grade**
 The steps for creating Starting Salary vs. MBA Grade scatterplot:
 1. Drag MBA Grade to Columns.
 2. Drag Starting Salary to Rows.
 3. Choose colour schemes for work experience, drag Degree Field to Shape, drag Experience to label.
+<img width="1420" alt="image" src="https://github.com/user-attachments/assets/bc0ab0e0-3613-4f3b-972f-c5d0ac859142">
+<br/><br/>
 
-Placement Rates
+
+**Placement Rates**
 The steps for creating Placement Rate fields for each degree and total:
 1. Create a calculated field named "Placement Rate", type in "SUM(IF [Status] = "Placed" THEN 1 ELSE 0 END)/COUNT([Status])" for calculation.
 2. Drag Placement Rate to Marks->Text, filter on a degree field. Show the figure as Percentage.
 3. Duplicate the worksheet for each degree.
+<img width="1426" alt="image" src="https://github.com/user-attachments/assets/18be097e-014c-442b-82e8-99185d59541b"> 
+<br/>
+<br/>
 
-Then format the dashboard with worksheets. The dashboard is grey, with white shadings for titles. Titles are 15 pt font, bolded and centred.
-
-The final dashboard is attached below.
-
+Then format the dashboard with worksheets. The **final dashboard** is attached below.
 <img width="1227" alt="Screenshot 2024-08-07 at 19 44 56" src="https://github.com/user-attachments/assets/a0a65241-a71d-43a1-867a-6fb22d3d3cd4">
-
 
 ### Findings
 The 14-page workbook analysis results are summarised as follows:
@@ -93,7 +97,7 @@ There were 67 null values for Starting Salary vs. MBA Grade graph, since student
 
 One of the main challenges was identifying which country this data belongs. The median salary figure was 265,000, which is twice higher than the US MBA median salary, even for Harvard Business School. One of the outliers was even at whooping 940,000! The currency was not specified, but since this dataset is from an university in Bangalore, India, we assumed that the starting salary was in Indian Rupees. According to Indeed, the average MBA starting salary is approximately ₹357,820 per year.
 
-The total placement rate was 68.84%, which was lower than 2023 US MBA average placement rate after 3 months - 86.8%. However, this figure varied from 100% to 44.9%, so 
+The total placement rate was 68.84%, which was lower than 2023 US MBA average placement rate after 3 months - 86.8%. The placement rate varied from 100% to 44.9%, so 68.84% is on the lower end of the interval. The university could increase their placement rate by implementing our recommendations.
 
 ### References
 1. [Indeed - Average MBA Salary in India](https://in.indeed.com/career-advice/pay-salary/average-mba-salary-in-india)
