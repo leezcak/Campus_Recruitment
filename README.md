@@ -9,6 +9,8 @@
 - [Data Analysis](#data-analysis)
 - [Findings](#findings)
 - [Recommendations](#recommendations)
+- [Discussions](#discussions)
+- [References](#references)
 
 
 ### Project Overview
@@ -43,7 +45,28 @@ EDA involved exploring the sales data to answer key questions, such as:
 These are the column headers of "campus_recruitment.csv" that we renamed for better legibility.
 ![image](https://github.com/user-attachments/assets/cf9cca35-4f9d-4256-934e-a54d914fd1f0)
 
-Some variables defied my initial expectations. For example, there was no clear correlation between MBA entrance exam grade and MBA course grade, with a R^2 of 0.005 and p-val of 0.001.
+Degree Distribution & Work Experience & Gender
+We created bar graphs to compare these variables. The steps for creating Gender Distribution in Degrees is elaborated below:
+1. Drag Degree Field to Columns.
+2. Drag Degree Field to Rows, change to Measure (Count).
+3. Create a filter on Gender and create a Gender label.
+4. Choose appropriate colour schemes to differentiate Male and Female.
+5. The final graph:
+6. <img width="1417" alt="image" src="https://github.com/user-attachments/assets/58b0e98a-510d-449c-b5fa-dfbca372f1ad">
+
+Entrance Exam Grade vs. MBA Grade & Starting Salary vs. MBA Grade
+The steps for creating Starting Salary vs. MBA Grade scatterplot:
+1. Drag MBA Grade to Columns.
+2. Drag Starting Salary to Rows.
+3. Choose colour schemes for work experience, drag Degree Field to Shape, drag Experience to label.
+
+Placement Rates
+The steps for creating Placement Rate fields for each degree and total:
+1. Create a calculated field named "Placement Rate", type in "SUM(IF [Status] = "Placed" THEN 1 ELSE 0 END)/COUNT([Status])" for calculation.
+2. Drag Placement Rate to Marks->Text, filter on a degree field. Show the figure as Percentage.
+3. Duplicate the worksheet for each degree.
+
+Then format the dashboard with worksheets. The dashboard is grey, with white shadings for titles. Titles are 15 pt font, bolded and centred.
 
 The final dashboard is attached below.
 
@@ -51,23 +74,29 @@ The final dashboard is attached below.
 
 
 ### Findings
-The analysis results are summarised as follows:
-1. 
-2. 
-3. 
-4. 
-5. 
+The 14-page workbook analysis results are summarised as follows:
+1. The male-to-female ratio was the highest in the Science & Tech degree, then Comm&Mgmt, then others.
+2. Graduates from Comm& Mgmt degrees were most likely to apply for MBA degree (145), compared to Sci&Tech (59), and Others (11).
+3. Most prestigious MBA programs require at least 2 years of work experience. However, contrary to our common belief, there were twice more students who did not have prior work experience compared to whom did. There are some MBA programs that do not require work experience, and this university could be one of those programs.
+4. MBA Students from Comm&Mgmt background had the highest placement rate of 70.34%, followed closely by Sci&Tech (69.49%), and then Others (45.45%). The total placement rate of this program was 68.84%.
+5. Surprisingly, MBA entrance exam did not correlate with overall MBA grade, with a R-squared value of 0.05 and p-val 0.001. This could be due to the university's program management style or simply an error in data collection method.
+6. The median salary was 265,000. The figure is elaborated in the Discussions section.
 
 ### Recommendations
-Based on the analysis, we recommend the following actions:
-- sdflsd
-- slfkj
-- slfkj
+Assuming the role of data analyst working at this university, we recommend the following actions based on our findings:
+- Revise entrance exam material and data collection methods to ensure the entrance exam accurately selects high-performing individuals.
+- There is a severe right skew for starting salary. Interview individuals who earn much more than average and provide support to the student body to increase their starting salary.
+- Aid students who have different backgrounds from Comm&Mgmt and Sci&Tech with job applications and interview preparations to increase their placement rate.
 
-### Limitations
-The currency was not specified, but since this dataset is from an university in Bangalore, India, we assumed that the starting salary was in Indian Rupees. According to Indeed, the average MBA starting salary is approximately ₹357,820 per year. Our median salary ₹265,000
+### Discussions
+There were 67 null values for Starting Salary vs. MBA Grade graph, since students who were not placed would not have a starting salary. Most of them were from Others degrees, which does not show the full picture for students from Others degrees.
+
+One of the main challenges was identifying which country this data belongs. The median salary figure was 265,000, which is twice higher than the US MBA median salary, even for Harvard Business School. One of the outliers was even at whooping 940,000! The currency was not specified, but since this dataset is from an university in Bangalore, India, we assumed that the starting salary was in Indian Rupees. According to Indeed, the average MBA starting salary is approximately ₹357,820 per year.
+
+The total placement rate was 68.84%, which was lower than 2023 US MBA average placement rate after 3 months - 86.8%. However, this figure varied from 100% to 44.9%, so 
 
 ### References
 1. [Indeed - Average MBA Salary in India](https://in.indeed.com/career-advice/pay-salary/average-mba-salary-in-india)
 2. [Decimal - What is 24 lakh in numbers?](https://decimal.info/lakh/what-is-24-lakh-in-numbers.html)
+3. [Fortune - MBA grads reliably earn a six-figure salary in these 6 industries](https://fortune.com/education/articles/mba-grads-reliably-earn-a-six-figure-salary-in-these-6-industries/)
 
